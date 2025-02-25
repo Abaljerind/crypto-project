@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  @apply bg-bg-primary text-text-primary;
+
+  --color-bg-primary-source: #ffffff;
+  --color-bg-secondary-source: #edf2f7;
+  --color-text-primary-source: #2d3748;
+  --color-text-secondary-source: #4a5568;
+  --color-text-accent-source: #2b6cb0;
+  --color-bg-input-source: #edf2f7;
+  --color-bg-button-source: #2b6cb0;
+}
+
+.rounded-div {
+  @apply border-bg-secondary bg-bg-primary mx-auto w-full max-w-[1140px] rounded-2xl border px-2 shadow-xl;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary-source: #2d3748;
+  --color-bg-secondary-source: #283141;
+  --color-text-primary-source: #dbdbdb;
+  --color-text-secondary-source: #e2e8f0;
+  --color-text-accent-source: #81e6d9;
+  --color-bg-input-source: #4a5361;
+  --color-bg-button-source: #81e6d9;
+}
+
+@theme inline {
+  --color-bg-primary: var(--color-bg-primary-source);
+  --color-bg-secondary: var(--color-bg-secondary-source);
+  --color-text-primary: var(--color-text-primary-source);
+  --color-text-secondary: var(--color-text-secondary-source);
+  --color-text-accent: var(--color-text-accent-source);
+  --color-bg-input: var(--color-bg-input-source);
+  --color-bg-button: var(--color-bg-button-source);
+
+  --text-md: 16px;
+}
