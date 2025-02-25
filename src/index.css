@@ -16,7 +16,7 @@
   @apply border-bg-secondary bg-bg-primary mx-auto w-full max-w-[1140px] rounded-2xl border px-2 shadow-xl;
 }
 
-[data-theme="dark"] {
+.dark {
   --color-bg-primary-source: #2d3748;
   --color-bg-secondary-source: #283141;
   --color-text-primary-source: #dbdbdb;
