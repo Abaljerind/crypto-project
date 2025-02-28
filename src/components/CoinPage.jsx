@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaFacebook, FaGithub, FaReddit, FaTwitter } from "react-icons/fa";
 import { Sparklines, SparklinesLine } from "react-sparklines";
+import DOMPurify from "dompurify";
 import { useParams } from "react-router-dom";
 
 const CoinPage = () => {
@@ -156,7 +157,13 @@ const CoinPage = () => {
       {/* description */}
       <div className="py-4">
         <p className="text-xl font-bold">About {coin.name}</p>
-        <p>{coin.description?.en || "No description available."}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(
+              coin.description ? coin.description.en : "",
+            ),
+          }}
+        ></p>
       </div>
     </div>
   );
