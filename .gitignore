@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 .prettierrc
 .env
+.firebaserc
+firebase.json
+
+build
